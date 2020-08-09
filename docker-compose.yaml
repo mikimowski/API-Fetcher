@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  mongo:
+    image: 'mongo:latest'
+    container_name: 'mongo'
+    ports:
+      - '27017:27017'
+  server:
+#    image: 'api-fetcher:latest'
+    container_name: 'api-fetcher'
+    depends_on:
+      - 'mongo'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+    entrypoint: /go/bin/TWFjaWVqLU1pa3XFgmE debug
+
+# to clean:
+# docker-compose down -v --rmi all --remove-orphans
