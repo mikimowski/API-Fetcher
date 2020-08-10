@@ -39,3 +39,6 @@ Some basic and naive testing is implemented.
     * `curl -si 127.0.0.1:8080/api/fetcher/1 -X PATCH -d '{"url": "https://httpbin.org/range/10", "interval":6}'`<br>
     * `curl -si 127.0.0.1:8080/api/fetcher/1 -X PATCH -d '{"id":1, "url": "https://httpbin.org/range/10", "interval":6}'`<br>
     * invalid: `curl -si 127.0.0.1:8080/api/fetcher/1 -X PATCH -d '{"id":42, "url": "https://httpbin.org/range/10", "interval":6}'`<br>
+* *id* unique integer > 0
+* *url* valid url string
+* *interval* integer > 0
