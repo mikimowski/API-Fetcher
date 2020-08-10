@@ -1,3 +1,6 @@
+// This implementation prevents from keeping numGourtines == numSubscriptions
+// Idea is based on AfterFunc and running proper goroutine when necessary
+
 package subscriber
 
 import (
