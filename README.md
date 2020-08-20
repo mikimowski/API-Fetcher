@@ -1,6 +1,6 @@
-HTTP Server providing REST API for CRUD operations.
-API allows to (un)subscribe to given urls and retrive saved data. Data is fetched from subscribed URLs on given interval.
-The key component is [subscriber](https://github.com/mikimowski/API-Fetcher/tree/master/subscriber) module that manages subscriptions. Neat implementation of timers is leveraged so that goroutines are spawned only when needed and no conflicts occur
+HTTP Server providing REST API for CRUD operations.<br>
+API allows to (un)subscribe to given urls and retrive saved data. Data is fetched from subscribed URLs on given interval.<br>
+The key component is [subscriber](https://github.com/mikimowski/API-Fetcher/tree/master/subscriber) module that manages subscriptions. Neat implementation of timers is leveraged so that goroutines are spawned only when needed and no conflicts occur.
 
 ### Database
 Two options:
